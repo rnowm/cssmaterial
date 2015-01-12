@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Polymer Contacts</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#303F9F">
+    <script>
+      if ('registerElement' in document
+        && 'createShadowRoot' in HTMLElement.prototype
+        && 'import' in document.createElement('link')
+        && 'content' in document.createElement('template')) {
+      } else {
+        document.write('<script src="bower_components/webcomponentsjs/webcomponents.min.js"><\/script>');
+      }
+    </script>
+    <link rel="import" href="elements.html">
+    <link rel="stylesheet" href="css/colors.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body fullbleed layout vertical>
+    <core-header-panel mode="waterfall-tall" flex>
+      <core-toolbar id="toolbar" color="blue-grey-100">
+        <core-icon-button icon="menu"></core-icon-button>
+        <div flex>CSS Material</div>
+        <paper-menu-button>
+          <paper-icon-button icon="file-download">
+            <a href=""></a>
+          </paper-icon-button>
+        </paper-menu-button>
+        <div class="bottom small">Color.css: The missing file in Material Design</div>
+      </core-toolbar>
+      <div class="content color-palette">
+        <section class="color-group">
+          <ul>
+            <li class="main-color" color="red">
+              <p>Red</p>
+              <p>color="red"</p>
+            </li>
+            <li color="red-50">color="red-50"</li>
+            <li color="red-100">color="red-100"</li>
+            <li color="red-200">color="red-200"</li>
+            <li color="red-300">color="red-300"</li>
+            <li color="red-400">color="red-400"</li>
+            <li color="red-500">color="red-500"</li>
+            <li color="red-600">color="red-600"</li>
+            <li color="red-700">color="red-700"</li>
+            <li color="red-800">color="red-800"</li>
+            <li color="red-900">color="red-900"</li>
+            <li color="red-A100">color="red-A100"</li>
+            <li color="red-A200">color="red-A200"</li>
+            <li color="red-A400">color="red-A400"</li>
+            <li color="red-A700">color="red-A700"</li>
+          </ul>
+          <ul color="white">
+            <li class="main-color" font="red">
+              <p font="white">Red</p>
+              <p>font="red"</p>
+            </li>
+            <li font="red-50">font="red-50"</li>
+            <li font="red-100">font="red-100"</li>
+            <li font="red-200">font="red-200"</li>
+            <li font="red-300">font="red-300"</li>
+            <li font="red-400">font="red-400"</li>
+            <li font="red-500">font="red-500"</li>
+            <li font="red-600">font="red-600"</li>
+            <li font="red-700">font="red-700"</li>
+            <li font="red-800">font="red-800"</li>
+            <li font="red-900">font="red-900"</li>
+            <li font="red-A100">font="red-A100"</li>
+            <li font="red-A200">font="red-A200"</li>
+            <li font="red-A400">font="red-A400"</li>
+            <li font="red-A700">font="red-A700"</li>
+          </ul>
+        </section>
+
+        <section class="color-group">
+          <ul>
+            <li class="main-color" color="pink">
+              <p>Pink</p>
+              <p>color="pink"</p>
+            </li>
+            <li color="pink-50">color="pink-50"</li>
+            <li color="pink-100">color="pink-100"</li>
+            <li color="pink-200">color="pink-200"</li>
+            <li color="pink-300">color="pink-300"</li>
+            <li color="pink-400">color="pink-400"</li>
+            <li color="pink-500">color="pink-500"</li>
+            <li color="pink-600">color="pink-600"</li>
+            <li color="pink-700">color="pink-700"</li>
+            <li color="pink-800">color="pink-800"</li>
+            <li color="pink-900">color="pink-900"</li>
+            <li color="pink-A100">color="pink-A100"</li>
+            <li color="pink-A200">color="pink-A200"</li>
+            <li color="pink-A400">color="pink-A400"</li>
+            <li color="pink-A700">color="pink-A700"</li>
+          </ul>
+          <ul color="white">
+            <li class="main-color" font="pink">
+              <p font="white">Pink</p>
+              <p>font="pink"</p>
+            </li>
+            <li font="pink-50">font="pink-50"</li>
+            <li font="pink-100">font="pink-100"</li>
+            <li font="pink-200">font="pink-200"</li>
+            <li font="pink-300">font="pink-300"</li>
+            <li font="pink-400">font="pink-400"</li>
+            <li font="pink-500">font="pink-500"</li>
+            <li font="pink-600">font="pink-600"</li>
+            <li font="pink-700">font="pink-700"</li>
+            <li font="pink-800">font="pink-800"</li>
+            <li font="pink-900">font="pink-900"</li>
+            <li font="pink-A100">font="pink-A100"</li>
+            <li font="pink-A200">font="pink-A200"</li>
+            <li font="pink-A400">font="pink-A400"</li>
+            <li font="pink-A700">font="pink-A700"</li>
+          </ul>
+        </section>
+
+        <section class="color-group">
+          <ul>
+            <li class="main-color" color="purple">
+              <p>Purple</p>
+              <p>color="purple"</p>
+            </li>
+            <li color="purple-50">color="purple-50"</li>
+            <li color="purple-100">color="purple-100"</li>
+            <li color="purple-200">color="purple-200"</li>
+            <li color="purple-300">color="purple-300"</li>
+            <li color="purple-400">color="purple-400"</li>
+            <li color="purple-500">color="purple-500"</li>
+            <li color="purple-600">color="purple-600"</li>
+            <li color="purple-700">color="purple-700"</li>
+            <li color="purple-800">color="purple-800"</li>
+            <li color="purple-900">color="purple-900"</li>
+            <li color="purple-A100">color="purple-A100"</li>
+            <li color="purple-A200">color="purple-A200"</li>
+            <li color="purple-A400">color="purple-A400"</li>
+            <li color="purple-A700">color="purple-A700"</li>
+          </ul>
+          <ul color="white">
+            <li class="main-color" font="purple">
+              <p font="white">Purple</p>
+              <p>font="purple"</p>
+            </li>
+            <li font="purple-50">font="purple-50"</li>
+            <li font="purple-100">font="purple-100"</li>
+            <li font="purple-200">font="purple-200"</li>
+            <li font="purple-300">font="purple-300"</li>
+            <li font="purple-400">font="purple-400"</li>
+            <li font="purple-500">font="purple-500"</li>
+            <li font="purple-600">font="purple-600"</li>
+            <li font="purple-700">font="purple-700"</li>
+            <li font="purple-800">font="purple-800"</li>
+            <li font="purple-900">font="purple-900"</li>
+            <li font="purple-A100">font="purple-A100"</li>
+            <li font="purple-A200">font="purple-A200"</li>
+            <li font="purple-A400">font="purple-A400"</li>
+            <li font="purple-A700">font="purple-A700"</li>
+          </ul>
+        </section>
+
+        <section class="color-group">
+          <ul>
+            <li class="main-color" color="deep-purple">
+              <p>Deep Purple</p>
+              <p>color="deep-purple"</p>
+            </li>
+            <li color="deep-purple-50">color="deep-purple-50"</li>
+            <li color="deep-purple-100">color="deep-purple-100"</li>
+            <li color="deep-purple-200">color="deep-purple-200"</li>
+            <li color="deep-purple-300">color="deep-purple-300"</li>
+            <li color="deep-purple-400">color="deep-purple-400"</li>
+            <li color="deep-purple-500">color="deep-purple-500"</li>
+            <li color="deep-purple-600">color="deep-purple-600"</li>
+            <li color="deep-purple-700">color="deep-purple-700"</li>
+            <li color="deep-purple-800">color="deep-purple-800"</li>
+            <li color="deep-purple-900">color="deep-purple-900"</li>
+            <li color="deep-purple-A100">color="deep-purple-A100"</li>
+            <li color="deep-purple-A200">color="deep-purple-A200"</li>
+            <li color="deep-purple-A400">color="deep-purple-A400"</li>
+            <li color="deep-purple-A700">color="deep-purple-A700"</li>
+          </ul>
+          <ul color="white">
+            <li class="main-color" font="deep-purple">
+              <p font="white">Deep Purple</p>
+              <p>font="deep-purple"</p>
+            </li>
+            <li font="deep-purple-50">font="deep-purple-50"</li>
+            <li font="deep-purple-100">font="deep-purple-100"</li>
+            <li font="deep-purple-200">font="deep-purple-200"</li>
+            <li font="deep-purple-300">font="deep-purple-300"</li>
+            <li font="deep-purple-400">font="deep-purple-400"</li>
+            <li font="deep-purple-500">font="deep-purple-500"</li>
+            <li font="deep-purple-600">font="deep-purple-600"</li>
+            <li font="deep-purple-700">font="deep-purple-700"</li>
+            <li font="deep-purple-800">font="deep-purple-800"</li>
+            <li font="deep-purple-900">font="deep-purple-900"</li>
+            <li font="deep-purple-A100">font="deep-purple-A100"</li>
+            <li font="deep-purple-A200">font="deep-purple-A200"</li>
+            <li font="deep-purple-A400">font="deep-purple-A400"</li>
+            <li font="deep-purple-A700">font="deep-purple-A700"</li>
+          </ul>
+        </section>
+
+        <section class="color-group">
+          <ul>
+            <li class="main-color" color="indigo">
+              <p>Indigo</p>
+              <p>color="indigo"</p>
+            </li>
+            <li color="indigo-50">color="indigo-50"</li>
+            <li color="indigo-100">color="indigo-100"</li>
+            <li color="indigo-200">color="indigo-200"</li>
+            <li color="indigo-300">color="indigo-300"</li>
+            <li color="indigo-400">color="indigo-400"</li>
+            <li color="indigo-500">color="indigo-500"</li>
+            <li color="indigo-600">color="indigo-600"</li>
+            <li color="indigo-700">color="indigo-700"</li>
+            <li color="indigo-800">color="indigo-800"</li>
+            <li color="indigo-900">color="indigo-900"</li>
+            <li color="indigo-A100">color="indigo-A100"</li>
+            <li color="indigo-A200">color="indigo-A200"</li>
+            <li color="indigo-A400">color="indigo-A400"</li>
+            <li color="indigo-A700">color="indigo-A700"</li>
+          </ul>
+          <ul color="white">
+            <li class="main-color" font="indigo">
+              <p font="white">Indigo</p>
+              <p>font="indigo"</p>
+            </li>
+            <li font="indigo-50">font="indigo-50"</li>
+            <li font="indigo-100">font="indigo-100"</li>
+            <li font="indigo-200">font="indigo-200"</li>
+            <li font="indigo-300">font="indigo-300"</li>
+            <li font="indigo-400">font="indigo-400"</li>
+            <li font="indigo-500">font="indigo-500"</li>
+            <li font="indigo-600">font="indigo-600"</li>
+            <li font="indigo-700">font="indigo-700"</li>
+            <li font="indigo-800">font="indigo-800"</li>
+            <li font="indigo-900">font="indigo-900"</li>
+            <li font="indigo-A100">font="indigo-A100"</li>
+            <li font="indigo-A200">font="indigo-A200"</li>
+            <li font="indigo-A400">font="indigo-A400"</li>
+            <li font="indigo-A700">font="indigo-A700"</li>
+          </ul>
+        </section>
+
+        <section class="color-group">
+          <ul>
+            <li class="main-color" color="blue">
+              <p>Blue</p>
+              <p>color="blue"</p>
+            </li>
+            <li color="blue-50">color="blue-50"</li>
+            <li color="blue-100">color="blue-100"</li>
+            <li color="blue-200">color="blue-200"</li>
+            <li color="blue-300">color="blue-300"</li>
+            <li color="blue-400">color="blue-400"</li>
+            <li color="blue-500">color="blue-500"</li>
+            <li color="blue-600">color="blue-600"</li>
+            <li color="blue-700">color="blue-700"</li>
+            <li color="blue-800">color="blue-800"</li>
+            <li color="blue-900">color="blue-900"</li>
+            <li color="blue-A100">color="blue-A100"</li>
+            <li color="blue-A200">color="blue-A200"</li>
+            <li color="blue-A400">color="blue-A400"</li>
+            <li color="blue-A700">color="blue-A700"</li>
+          </ul>
+          <ul color="white">
+            <li class="main-color" font="blue">
+              <p font="white">Blue</p>
+              <p>font="blue"</p>
+            </li>
+            <li font="blue-50">font="blue-50"</li>
+            <li font="blue-100">font="blue-100"</li>
+            <li font="blue-200">font="blue-200"</li>
+            <li font="blue-300">font="blue-300"</li>
+            <li font="blue-400">font="blue-400"</li>
+            <li font="blue-500">font="blue-500"</li>
+            <li font="blue-600">font="blue-600"</li>
+            <li font="blue-700">font="blue-700"</li>
+            <li font="blue-800">font="blue-800"</li>
+            <li font="blue-900">font="blue-900"</li>
+            <li font="blue-A100">font="blue-A100"</li>
+            <li font="blue-A200">font="blue-A200"</li>
+            <li font="blue-A400">font="blue-A400"</li>
+            <li font="blue-A700">font="blue-A700"</li>
+          </ul>
+        </section>
+
+        <section class="color-group">
+          <ul>
+            <li class="main-color" color="light-blue">
+              <p>Light Blue</p>
+              <p>color="light-blue"</p>
+            </li>
+            <li color="light-blue-50">color="light-blue-50"</li>
+            <li color="light-blue-100">color="light-blue-100"</li>
+            <li color="light-blue-200">color="light-blue-200"</li>
+            <li color="light-blue-300">color="light-blue-300"</li>
+            <li color="light-blue-400">color="light-blue-400"</li>
+            <li color="light-blue-500">color="light-blue-500"</li>
+            <li color="light-blue-600">color="light-blue-600"</li>
+            <li color="light-blue-700">color="light-blue-700"</li>
+            <li color="light-blue-800">color="light-blue-800"</li>
+            <li color="light-blue-900">color="light-blue-900"</li>
+            <li color="light-blue-A100">color="light-blue-A100"</li>
+            <li color="light-blue-A200">color="light-blue-A200"</li>
+            <li color="light-blue-A400">color="light-blue-A400"</li>
+            <li color="light-blue-A700">color="light-blue-A700"</li>
+          </ul>
+          <ul color="white">
+            <li class="main-color" font="light-blue">
+              <p font="white">Light Blue</p>
+              <p>font="light-blue"</p>
+            </li>
+            <li font="light-blue-50">font="light-blue-50"</li>
+            <li font="light-blue-100">font="light-blue-100"</li>
+            <li font="light-blue-200">font="light-blue-200"</li>
+            <li font="light-blue-300">font="light-blue-300"</li>
+            <li font="light-blue-400">font="light-blue-400"</li>
+            <li font="light-blue-500">font="light-blue-500"</li>
+            <li font="light-blue-600">font="light-blue-600"</li>
+            <li font="light-blue-700">font="light-blue-700"</li>
+            <li font="light-blue-800">font="light-blue-800"</li>
+            <li font="light-blue-900">font="light-blue-900"</li>
+            <li font="light-blue-A100">font="light-blue-A100"</li>
+            <li font="light-blue-A200">font="light-blue-A200"</li>
+            <li font="light-blue-A400">font="light-blue-A400"</li>
+            <li font="light-blue-A700">font="light-blue-A700"</li>
+          </ul>
+        </section>
+
+        <section class="color-group">
+          <ul>
+            <li class="main-color" color="cyan">
+              <p>Cyan</p>
+              <p>color="cyan"</p>
+            </li>
+            <li color="cyan-50">color="cyan-50"</li>
+            <li color="cyan-100">color="cyan-100"</li>
+            <li color="cyan-200">color="cyan-200"</li>
+            <li color="cyan-300">color="cyan-300"</li>
+            <li color="cyan-400">color="cyan-400"</li>
+            <li color="cyan-500">color="cyan-500"</li>
+            <li color="cyan-600">color="cyan-600"</li>
+            <li color="cyan-700">color="cyan-700"</li>
+            <li color="cyan-800">color="cyan-800"</li>
+            <li color="cyan-900">color="cyan-900"</li>
+            <li color="cyan-A100">color="cyan-A100"</li>
+            <li color="cyan-A200">color="cyan-A200"</li>
+            <li color="cyan-A400">color="cyan-A400"</li>
+            <li color="cyan-A700">color="cyan-A700"</li>
+          </ul>
+          <ul color="white">
+            <li class="main-color" font="cyan">
+              <p font="white">Cyan</p>
+              <p>font="cyan"</p>
+            </li>
+            <li font="cyan-50">font="cyan-50"</li>
+            <li font="cyan-100">font="cyan-100"</li>
+            <li font="cyan-200">font="cyan-200"</li>
+            <li font="cyan-300">font="cyan-300"</li>
+            <li font="cyan-400">font="cyan-400"</li>
+            <li font="cyan-500">font="cyan-500"</li>
+            <li font="cyan-600">font="cyan-600"</li>
+            <li font="cyan-700">font="cyan-700"</li>
+            <li font="cyan-800">font="cyan-800"</li>
+            <li font="cyan-900">font="cyan-900"</li>
+            <li font="cyan-A100">font="cyan-A100"</li>
+            <li font="cyan-A200">font="cyan-A200"</li>
+            <li font="cyan-A400">font="cyan-A400"</li>
+            <li font="cyan-A700">font="cyan-A700"</li>
+          </ul>
+        </section>
+
+        <section class="color-group">
+          <ul>
+            <li class="main-color" color="teal">
+              <p>Teal</p>
+              <p>color="teal"</p>
+            </li>
+            <li color="teal-50">color="teal-50"</li>
+            <li color="teal-100">color="teal-100"</li>
+            <li color="teal-200">color="teal-200"</li>
+            <li color="teal-300">color="teal-300"</li>
+            <li color="teal-400">color="teal-400"</li>
+            <li color="teal-500">color="teal-500"</li>
+            <li color="teal-600">color="teal-600"</li>
+            <li color="teal-700">color="teal-700"</li>
+            <li color="teal-800">color="teal-800"</li>
+            <li color="teal-900">color="teal-900"</li>
+            <li color="teal-A100">color="teal-A100"</li>
+            <li color="teal-A200">color="teal-A200"</li>
+            <li color="teal-A400">color="teal-A400"</li>
+            <li color="teal-A700">color="teal-A700"</li>
+          </ul>
+          <ul color="white">
+            <li class="main-color" font="teal">
+              <p font="white">Teal</p>
+              <p>font="teal"</p>
+            </li>
+            <li font="teal-50">font="teal-50"</li>
+            <li font="teal-100">font="teal-100"</li>
+            <li font="teal-200">font="teal-200"</li>
+            <li font="teal-300">font="teal-300"</li>
+            <li font="teal-400">font="teal-400"</li>
+            <li font="teal-500">font="teal-500"</li>
+            <li font="teal-600">font="teal-600"</li>
+            <li font="teal-700">font="teal-700"</li>
+            <li font="teal-800">font="teal-800"</li>
+            <li font="teal-900">font="teal-900"</li>
+            <li font="teal-A100">font="teal-A100"</li>
+            <li font="teal-A200">font="teal-A200"</li>
+            <li font="teal-A400">font="teal-A400"</li>
+            <li font="teal-A700">font="teal-A700"</li>
+          </ul>
+        </section>
+
+        <section class="color-group">
+          <ul>
+            <li class="main-color" color="green">
+              <p>Green</p>
+              <p>color="green"</p>
+            </li>
+            <li color="green-50">color="green-50"</li>
+            <li color="green-100">color="green-100"</li>
+            <li color="green-200">color="green-200"</li>
+            <li color="green-300">color="green-300"</li>
+            <li color="green-400">color="green-400"</li>
+            <li color="green-500">color="green-500"</li>
+            <li color="green-600">color="green-600"</li>
+            <li color="green-700">color="green-700"</li>
+            <li color="green-800">color="green-800"</li>
+            <li color="green-900">color="green-900"</li>
+            <li color="green-A100">color="green-A100"</li>
+            <li color="green-A200">color="green-A200"</li>
+            <li color="green-A400">color="green-A400"</li>
+            <li color="green-A700">color="green-A700"</li>
+          </ul>
+          <ul color="white">
+            <li class="main-color" font="green">
+              <p font="white">Green</p>
+              <p>font="green"</p>
+            </li>
+            <li font="green-50">font="green-50"</li>
+            <li font="green-100">font="green-100"</li>
+            <li font="green-200">font="green-200"</li>
+            <li font="green-300">font="green-300"</li>
+            <li font="green-400">font="green-400"</li>
+            <li font="green-500">font="green-500"</li>
+            <li font="green-600">font="green-600"</li>
+            <li font="green-700">font="green-700"</li>
+            <li font="green-800">font="green-800"</li>
+            <li font="green-900">font="green-900"</li>
+            <li font="green-A100">font="green-A100"</li>
+            <li font="green-A200">font="green-A200"</li>
+            <li font="green-A400">font="green-A400"</li>
+            <li font="green-A700">font="green-A700"</li>
+          </ul>
+        </section>
+
+        <section class="color-group">
+          <ul>
+            <li class="main-color" color="light-green">
+              <p>Light Green</p>
+              <p>color="light-green"</p>
+            </li>
+            <li color="light-green-50">color="light-green-50"</li>
+            <li color="light-green-100">color="light-green-100"</li>
+            <li color="light-green-200">color="light-green-200"</li>
+            <li color="light-green-300">color="light-green-300"</li>
+            <li color="light-green-400">color="light-green-400"</li>
+            <li color="light-green-500">color="light-green-500"</li>
+            <li color="light-green-600">color="light-green-600"</li>
+            <li color="light-green-700">color="light-green-700"</li>
+            <li color="light-green-800">color="light-green-800"</li>
+            <li color="light-green-900">color="light-green-900"</li>
+            <li color="light-green-A100">color="light-green-A100"</li>
+            <li color="light-green-A200">color="light-green-A200"</li>
+            <li color="light-green-A400">color="light-green-A400"</li>
+            <li color="light-green-A700">color="light-green-A700"</li>
+          </ul>
+          <ul color="white">
+            <li class="main-color" font="light-green">
+              <p font="white">Light Green</p>
+              <p>font="light-green"</p>
+            </li>
+            <li font="light-green-50">font="light-green-50"</li>
+            <li font="light-green-100">font="light-green-100"</li>
+            <li font="light-green-200">font="light-green-200"</li>
+            <li font="light-green-300">font="light-green-300"</li>
+            <li font="light-green-400">font="light-green-400"</li>
+            <li font="light-green-500">font="light-green-500"</li>
+            <li font="light-green-600">font="light-green-600"</li>
+            <li font="light-green-700">font="light-green-700"</li>
+            <li font="light-green-800">font="light-green-800"</li>
+            <li font="light-green-900">font="light-green-900"</li>
+            <li font="light-green-A100">font="light-green-A100"</li>
+            <li font="light-green-A200">font="light-green-A200"</li>
+            <li font="light-green-A400">font="light-green-A400"</li>
+            <li font="light-green-A700">font="light-green-A700"</li>
+          </ul>
+        </section>
+
+        <section class="color-group">
+          <ul>
+            <li class="main-color" color="lime">
+              <p>Lime</p>
+              <p>color="lime"</p>
+            </li>
+            <li color="lime-50">color="lime-50"</li>
+            <li color="lime-100">color="lime-100"</li>
+            <li color="lime-200">color="lime-200"</li>
+            <li color="lime-300">color="lime-300"</li>
+            <li color="lime-400">color="lime-400"</li>
+            <li color="lime-500">color="lime-500"</li>
+            <li color="lime-600">color="lime-600"</li>
+            <li color="lime-700">color="lime-700"</li>
+            <li color="lime-800">color="lime-800"</li>
+            <li color="lime-900">color="lime-900"</li>
+            <li color="lime-A100">color="lime-A100"</li>
+            <li color="lime-A200">color="lime-A200"</li>
+            <li color="lime-A400">color="lime-A400"</li>
+            <li color="lime-A700">color="lime-A700"</li>
+          </ul>
+          <ul color="white">
+            <li class="main-color" font="lime">
+              <p font="white">Lime</p>
+              <p>font="lime"</p>
+            </li>
+            <li font="lime-50">font="lime-50"</li>
+            <li font="lime-100">font="lime-100"</li>
+            <li font="lime-200">font="lime-200"</li>
+            <li font="lime-300">font="lime-300"</li>
+            <li font="lime-400">font="lime-400"</li>
+            <li font="lime-500">font="lime-500"</li>
+            <li font="lime-600">font="lime-600"</li>
+            <li font="lime-700">font="lime-700"</li>
+            <li font="lime-800">font="lime-800"</li>
+            <li font="lime-900">font="lime-900"</li>
+            <li font="lime-A100">font="lime-A100"</li>
+            <li font="lime-A200">font="lime-A200"</li>
+            <li font="lime-A400">font="lime-A400"</li>
+            <li font="lime-A700">font="lime-A700"</li>
+          </ul>
+        </section>
+
+        <section class="color-group">
+          <ul>
+            <li class="main-color" color="yellow">
+              <p>Yellow</p>
+              <p>color="yellow"</p>
+            </li>
+            <li color="yellow-50">color="yellow-50"</li>
+            <li color="yellow-100">color="yellow-100"</li>
+            <li color="yellow-200">color="yellow-200"</li>
+            <li color="yellow-300">color="yellow-300"</li>
+            <li color="yellow-400">color="yellow-400"</li>
+            <li color="yellow-500">color="yellow-500"</li>
+            <li color="yellow-600">color="yellow-600"</li>
+            <li color="yellow-700">color="yellow-700"</li>
+            <li color="yellow-800">color="yellow-800"</li>
+            <li color="yellow-900">color="yellow-900"</li>
+            <li color="yellow-A100">color="yellow-A100"</li>
+            <li color="yellow-A200">color="yellow-A200"</li>
+            <li color="yellow-A400">color="yellow-A400"</li>
+            <li color="yellow-A700">color="yellow-A700"</li>
+          </ul>
+          <ul color="white">
+            <li class="main-color" font="yellow">
+              <p font="white">Yellow</p>
+              <p>font="yellow"</p>
+            </li>
+            <li font="yellow-50">font="yellow-50"</li>
+            <li font="yellow-100">font="yellow-100"</li>
+            <li font="yellow-200">font="yellow-200"</li>
+            <li font="yellow-300">font="yellow-300"</li>
+            <li font="yellow-400">font="yellow-400"</li>
+            <li font="yellow-500">font="yellow-500"</li>
+            <li font="yellow-600">font="yellow-600"</li>
+            <li font="yellow-700">font="yellow-700"</li>
+            <li font="yellow-800">font="yellow-800"</li>
+            <li font="yellow-900">font="yellow-900"</li>
+            <li font="yellow-A100">font="yellow-A100"</li>
+            <li font="yellow-A200">font="yellow-A200"</li>
+            <li font="yellow-A400">font="yellow-A400"</li>
+            <li font="yellow-A700">font="yellow-A700"</li>
+          </ul>
+        </section>
+
+        <section class="color-group">
+          <ul>
+            <li class="main-color" color="amber">
+              <p>Amber</p>
+              <p>color="amber"</p>
+            </li>
+            <li color="amber-50">color="amber-50"</li>
+            <li color="amber-100">color="amber-100"</li>
+            <li color="amber-200">color="amber-200"</li>
+            <li color="amber-300">color="amber-300"</li>
+            <li color="amber-400">color="amber-400"</li>
+            <li color="amber-500">color="amber-500"</li>
+            <li color="amber-600">color="amber-600"</li>
+            <li color="amber-700">color="amber-700"</li>
+            <li color="amber-800">color="amber-800"</li>
+            <li color="amber-900">color="amber-900"</li>
+            <li color="amber-A100">color="amber-A100"</li>
+            <li color="amber-A200">color="amber-A200"</li>
+            <li color="amber-A400">color="amber-A400"</li>
+            <li color="amber-A700">color="amber-A700"</li>
+          </ul>
+          <ul color="white">
+            <li class="main-color" font="amber">
+              <p font="white">Amber</p>
+              <p>font="amber"</p>
+            </li>
+            <li font="amber-50">font="amber-50"</li>
+            <li font="amber-100">font="amber-100"</li>
+            <li font="amber-200">font="amber-200"</li>
+            <li font="amber-300">font="amber-300"</li>
+            <li font="amber-400">font="amber-400"</li>
+            <li font="amber-500">font="amber-500"</li>
+            <li font="amber-600">font="amber-600"</li>
+            <li font="amber-700">font="amber-700"</li>
+            <li font="amber-800">font="amber-800"</li>
+            <li font="amber-900">font="amber-900"</li>
+            <li font="amber-A100">font="amber-A100"</li>
+            <li font="amber-A200">font="amber-A200"</li>
+            <li font="amber-A400">font="amber-A400"</li>
+            <li font="amber-A700">font="amber-A700"</li>
+          </ul>
+        </section>
+
+        <section class="color-group">
+          <ul>
+            <li class="main-color" color="orange">
+              <p>Orange</p>
+              <p>color="orange"</p>
+            </li>
+            <li color="orange-50">color="orange-50"</li>
+            <li color="orange-100">color="orange-100"</li>
+            <li color="orange-200">color="orange-200"</li>
+            <li color="orange-300">color="orange-300"</li>
+            <li color="orange-400">color="orange-400"</li>
+            <li color="orange-500">color="orange-500"</li>
+            <li color="orange-600">color="orange-600"</li>
+            <li color="orange-700">color="orange-700"</li>
+            <li color="orange-800">color="orange-800"</li>
+            <li color="orange-900">color="orange-900"</li>
+            <li color="orange-A100">color="orange-A100"</li>
+            <li color="orange-A200">color="orange-A200"</li>
+            <li color="orange-A400">color="orange-A400"</li>
+            <li color="orange-A700">color="orange-A700"</li>
+          </ul>
+          <ul color="white">
+            <li class="main-color" font="orange">
+              <p font="white">Orange</p>
+              <p>font="orange"</p>
+            </li>
+            <li font="orange-50">font="orange-50"</li>
+            <li font="orange-100">font="orange-100"</li>
+            <li font="orange-200">font="orange-200"</li>
+            <li font="orange-300">font="orange-300"</li>
+            <li font="orange-400">font="orange-400"</li>
+            <li font="orange-500">font="orange-500"</li>
+            <li font="orange-600">font="orange-600"</li>
+            <li font="orange-700">font="orange-700"</li>
+            <li font="orange-800">font="orange-800"</li>
+            <li font="orange-900">font="orange-900"</li>
+            <li font="orange-A100">font="orange-A100"</li>
+            <li font="orange-A200">font="orange-A200"</li>
+            <li font="orange-A400">font="orange-A400"</li>
+            <li font="orange-A700">font="orange-A700"</li>
+          </ul>
+        </section>
+
+        <section class="color-group">
+          <ul>
+            <li class="main-color" color="deep-orange">
+              <p>Deep Orange</p>
+              <p>color="deep-orange"</p>
+            </li>
+            <li color="deep-orange-50">color="deep-orange-50"</li>
+            <li color="deep-orange-100">color="deep-orange-100"</li>
+            <li color="deep-orange-200">color="deep-orange-200"</li>
+            <li color="deep-orange-300">color="deep-orange-300"</li>
+            <li color="deep-orange-400">color="deep-orange-400"</li>
+            <li color="deep-orange-500">color="deep-orange-500"</li>
+            <li color="deep-orange-600">color="deep-orange-600"</li>
+            <li color="deep-orange-700">color="deep-orange-700"</li>
+            <li color="deep-orange-800">color="deep-orange-800"</li>
+            <li color="deep-orange-900">color="deep-orange-900"</li>
+            <li color="deep-orange-A100">color="deep-orange-A100"</li>
+            <li color="deep-orange-A200">color="deep-orange-A200"</li>
+            <li color="deep-orange-A400">color="deep-orange-A400"</li>
+            <li color="deep-orange-A700">color="deep-orange-A700"</li>
+          </ul>
+          <ul color="white">
+            <li class="main-color" font="deep-orange">
+              <p font="white">Deep Orange</p>
+              <p>font="deep-orange"</p>
+            </li>
+            <li font="deep-orange-50">font="deep-orange-50"</li>
+            <li font="deep-orange-100">font="deep-orange-100"</li>
+            <li font="deep-orange-200">font="deep-orange-200"</li>
+            <li font="deep-orange-300">font="deep-orange-300"</li>
+            <li font="deep-orange-400">font="deep-orange-400"</li>
+            <li font="deep-orange-500">font="deep-orange-500"</li>
+            <li font="deep-orange-600">font="deep-orange-600"</li>
+            <li font="deep-orange-700">font="deep-orange-700"</li>
+            <li font="deep-orange-800">font="deep-orange-800"</li>
+            <li font="deep-orange-900">font="deep-orange-900"</li>
+            <li font="deep-orange-A100">font="deep-orange-A100"</li>
+            <li font="deep-orange-A200">font="deep-orange-A200"</li>
+            <li font="deep-orange-A400">font="deep-orange-A400"</li>
+            <li font="deep-orange-A700">font="deep-orange-A700"</li>
+          </ul>
+        </section>
+
+        <section class="color-group">
+          <ul>
+            <li class="main-color" color="brown">
+              <p>Brown</p>
+              <p>color="brown"</p>
+            </li>
+            <li color="brown-50">color="brown-50"</li>
+            <li color="brown-100">color="brown-100"</li>
+            <li color="brown-200">color="brown-200"</li>
+            <li color="brown-300">color="brown-300"</li>
+            <li color="brown-400">color="brown-400"</li>
+            <li color="brown-500">color="brown-500"</li>
+            <li color="brown-600">color="brown-600"</li>
+            <li color="brown-700">color="brown-700"</li>
+            <li color="brown-800">color="brown-800"</li>
+            <li color="brown-900">color="brown-900"</li>
+          </ul>
+          <ul color="white">
+            <li class="main-color" font="brown">
+              <p font="white">Brown</p>
+              <p>font="brown"</p>
+            </li>
+            <li font="brown-50">font="brown-50"</li>
+            <li font="brown-100">font="brown-100"</li>
+            <li font="brown-200">font="brown-200"</li>
+            <li font="brown-300">font="brown-300"</li>
+            <li font="brown-400">font="brown-400"</li>
+            <li font="brown-500">font="brown-500"</li>
+            <li font="brown-600">font="brown-600"</li>
+            <li font="brown-700">font="brown-700"</li>
+            <li font="brown-800">font="brown-800"</li>
+            <li font="brown-900">font="brown-900"</li>
+          </ul>
+        </section>
+
+        <section class="color-group">
+          <ul>
+            <li class="main-color" color="grey">
+              <p>Grey</p>
+              <p>color="grey"</p>
+            </li>
+            <li color="grey-50">color="grey-50"</li>
+            <li color="grey-100">color="grey-100"</li>
+            <li color="grey-200">color="grey-200"</li>
+            <li color="grey-300">color="grey-300"</li>
+            <li color="grey-400">color="grey-400"</li>
+            <li color="grey-500">color="grey-500"</li>
+            <li color="grey-600">color="grey-600"</li>
+            <li color="grey-700">color="grey-700"</li>
+            <li color="grey-800">color="grey-800"</li>
+            <li color="grey-900">color="grey-900"</li>
+          </ul>
+          <ul color="white">
+            <li class="main-color" font="grey">
+              <p font="white">Grey</p>
+              <p>font="grey"</p>
+            </li>
+            <li font="grey-50">font="grey-50"</li>
+            <li font="grey-100">font="grey-100"</li>
+            <li font="grey-200">font="grey-200"</li>
+            <li font="grey-300">font="grey-300"</li>
+            <li font="grey-400">font="grey-400"</li>
+            <li font="grey-500">font="grey-500"</li>
+            <li font="grey-600">font="grey-600"</li>
+            <li font="grey-700">font="grey-700"</li>
+            <li font="grey-800">font="grey-800"</li>
+            <li font="grey-900">font="grey-900"</li>
+          </ul>
+        </section>
+
+        <section class="color-group">
+          <ul>
+            <li class="main-color" color="blue-grey">
+              <p>Blue Grey</p>
+              <p>color="blue-grey"</p>
+            </li>
+            <li color="blue-grey-50">color="blue-grey-50"</li>
+            <li color="blue-grey-100">color="blue-grey-100"</li>
+            <li color="blue-grey-200">color="blue-grey-200"</li>
+            <li color="blue-grey-300">color="blue-grey-300"</li>
+            <li color="blue-grey-400">color="blue-grey-400"</li>
+            <li color="blue-grey-500">color="blue-grey-500"</li>
+            <li color="blue-grey-600">color="blue-grey-600"</li>
+            <li color="blue-grey-700">color="blue-grey-700"</li>
+            <li color="blue-grey-800">color="blue-grey-800"</li>
+            <li color="blue-grey-900">color="blue-grey-900"</li>
+          </ul>
+          <ul color="white">
+            <li class="main-color">
+              <p font="white">Blue Grey</p>
+              <p>font="blue-grey"</p>
+            </li>
+            <li font="blue-grey-50">font="blue-grey-50"</li>
+            <li font="blue-grey-100">font="blue-grey-100"</li>
+            <li font="blue-grey-200">font="blue-grey-200"</li>
+            <li font="blue-grey-300">font="blue-grey-300"</li>
+            <li font="blue-grey-400">font="blue-grey-400"</li>
+            <li font="blue-grey-500">font="blue-grey-500"</li>
+            <li font="blue-grey-600">font="blue-grey-600"</li>
+            <li font="blue-grey-700">font="blue-grey-700"</li>
+            <li font="blue-grey-800">font="blue-grey-800"</li>
+            <li font="blue-grey-900">font="blue-grey-900"</li>
+          </ul>
+        </section>
+
+        <section class="color-group">
+          <ul>
+            <li color="black">color="black"</li>
+            <li color="white">color="white"</li>
+          </ul>
+          <ul color="white">
+            <li font="black">font="black"</li>
+            <li color="black" font="white">font="white"</li>
+          </ul>
+        </section>
+
+      </div>
+    </core-header-panel>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
